@@ -1,2 +1,2 @@
-# tools-for-javascript
-工具函数集合
+# tools-for-javascript js工具函数集合
+
