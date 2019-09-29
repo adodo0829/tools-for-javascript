@@ -2,7 +2,7 @@
  * 1.时间分段
  * @date {'2019-9-10 12:30:29'}
  */
-const timeFromNow = date => {
+export const timeFromNow = date => {
   let gap = new Date - new Date(date)
   return (
     gap < 10 * 1000 && '刚刚' ||
@@ -13,3 +13,12 @@ const timeFromNow = date => {
     gap < 12 * 30 * 24 * 60 * 60 * 1000 && '一年内' || '一年前'
   )
 }
+
+/**
+ * 页面路由懒加载
+ * @path String: 组件路径
+ * @viewName String: 组件名
+ * @return {function}
+ */
+export const getView = (path, viewName) => () => import(`@/views/${path}/${viewName}.vue`)
+
